@@ -1,0 +1,244 @@
+:root {
+    --body-color: #0d3e5a;
+    --style-color: #e93d3d;
+    --text-color: #fff;
+    --border-color: #000;
+
+    /* secondary colors */
+
+    --webkit-color: #1ae5ec;
+    --hover-color: #f86969;
+
+    --mono-font: monospace;
+
+}
+
+.theme-two {
+    --body-color: #e93d3d;
+    --style-color: #0d3e5a;
+    --text-color: #000;
+    --border-color: #fff;
+
+    /* secondary colors */
+
+    --webkit-color: #e76418;
+    --hover-color: #1872a7;
+
+    --mono-font: Georgia;
+}
+
+.theme-three {
+    --body-color: #00CD9A;
+    --style-color: #140841;
+    --text-color: #ffffff;
+    --border-color: #7F325D;
+
+    /* secondary colors */
+
+    --webkit-color: #e76418;
+    --hover-color: #00675F;
+
+    --mono-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.theme-four {
+    --body-color: #FF00DE;
+    --style-color: #52424E;
+    --text-color: #3cff00;
+    --border-color: #007C4F;
+
+    /* secondary colors */
+
+    --webkit-color: #790067;
+    --hover-color: #B8A6B3;
+
+    --mono-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* ------Styling Starts Here------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--mono-font);
+    color: var(--text-color);
+}
+
+main {
+    height: max-content;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+img {
+    border-radius: 50%;
+    animation: animeRotate 10s linear infinite;
+    animation-play-state: paused;
+}
+
+
+@keyframes animeRotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    max-width: 60vh;
+    height: fit-content;
+    padding: 20px 0;
+    margin: 10px;
+    background-color: var(--body-color);
+    text-align: center;
+    overflow: hidden;
+}
+
+.art-sec {
+    margin: 20px auto;
+    background-color: #fff;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.circle {
+    background-color: #fff;
+    height: 285px;
+    width: 285px;
+    border-radius: 50%;
+}
+
+#coverArt {
+    width: 285px;
+    position: absolute;
+}
+
+input {
+    width: 80%;
+}
+
+.control {
+    margin: 10px 0 20px 0;
+}
+
+button {
+    font-size: 1.2rem;
+    width: 100px;
+    padding: 10px 0;
+    border: none;
+    background-color: var(--style-color);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+input[type='range'] {
+
+    -webkit-appearance: none;
+    /* background-image: linear-gradient(to right, rgb(240, 50, 50), rgb(153, 184, 14)); */
+    background-color: #fff;
+    border-radius: 10px;
+    outline: 2px solid var(--border-color);
+    height: 1em;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    background-color: var(--webkit-color);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    background-color: var(--webkit-color);
+    outline: 2px solid var(--border-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.seek-bar {
+    background-color: var(--style-color);
+}
+
+.colume-ctl {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.colume-ctl button {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.time-ups {
+    outline: 2px solid var(--style-color);
+    max-width: 120px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.time-ups:hover {
+    background-color: #fff;
+    color: var(--style-color);
+    outline: 2px solid var(--border-color);
+}
+
+.theme-sel {
+    background-color: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+option:nth-child(1) {
+    background-color: #0d3e5a;
+    color: #e93d3d;
+}
+
+option:nth-child(2) {
+    background-color: #e93d3d;
+    color: #000;
+}
+
+option:nth-child(3) {
+    background-color: #00CD9A;
+    color: #fff;
+}
+
+option:nth-child(4) {
+    background-color: #FF00DE;
+    color: #3cff00;
+
+}
